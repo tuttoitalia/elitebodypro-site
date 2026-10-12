@@ -2,23 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Elite Body Pro — by Michelle Blaze</title>
-  <meta name="description" content="Elite Body Pro by Michelle Blaze — Pro Treatments &amp; Mentoring. Zurich · Ibiza · Dubai. Something extraordinary is taking shape.">
+  <title>Elite Body Pro | by Michelle Blaze</title>
+  <meta name="description" content="Elite Body Pro by Michelle Blaze: Pro Treatments &amp; Mentoring. Zurich · Ibiza · Dubai. Something extraordinary is taking shape.">
   <meta name="theme-color" content="#0B0908">
   <link rel="icon" href="https://elitebodypro.com/favicon.png">
   <link rel="apple-touch-icon" href="https://elitebodypro.com/favicon.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://elitebodypro.com/">
   <meta property="og:site_name" content="Elite Body Pro">
-  <meta property="og:title" content="Elite Body Pro — by Michelle Blaze">
+  <meta property="og:title" content="Elite Body Pro by Michelle Blaze">
   <meta property="og:description" content="Pro Treatments &amp; Mentoring · Zurich · Ibiza · Dubai. Something extraordinary is taking shape.">
   <meta property="og:image" content="https://elitebodypro.com/og-image.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Elite Body Pro — by Michelle Blaze">
+  <meta property="og:image:alt" content="Elite Body Pro by Michelle Blaze">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Elite Body Pro — by Michelle Blaze">
+  <meta name="twitter:title" content="Elite Body Pro by Michelle Blaze">
   <meta name="twitter:description" content="Pro Treatments · Zurich · Ibiza · Dubai.">
   <meta name="twitter:image" content="https://elitebodypro.com/og-image.png">
   <style>
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     const templateEl = document.querySelector('script[type="__bundler/template"]');
     if (!manifestEl || !templateEl) {
       setStatus('Error: missing bundle data');
-      console.error('[bundler] Missing script tags — manifestEl:', !!manifestEl, 'templateEl:', !!templateEl);
+      console.error('[bundler] Missing script tags: manifestEl:', !!manifestEl, 'templateEl:', !!templateEl);
       return;
     }
 
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     setStatus('Rendering...');
     for (const uuid of uuids) template = template.split(uuid).join(blobUrls[uuid]);
 
-    // Strip integrity + crossorigin — blob URLs from a file:// document inherit
+    // Strip integrity + crossorigin: blob URLs from a file:// document inherit
     // a null origin, so crossorigin forces a CORS fetch that SRI then rejects.
     // The manifest bytes are ours; SRI protects against CDN compromise, not this.
     template = template.replace(/\s+integrity="[^"]*"/gi, '').replace(/\s+crossorigin="[^"]*"/gi, '');
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
     // Parse the template and swap the root element. Scripts inserted via
-    // DOMParser/replaceWith are inert per spec — re-create each with
+    // DOMParser/replaceWith are inert per spec: re-create each with
     // createElement so they execute, awaiting onload for src scripts to
     // preserve ordering (React before ReactDOM before Babel before text/babel).
     const doc = new DOMParser().parseFromString(template, 'text/html');
